@@ -1,0 +1,1 @@
+This is 2 attempt to create a pokedex from YTB tuto
