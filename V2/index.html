@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex || LuckyLucs</title>
 
     <!-- ##### Icon du site ##### -->
     <link rel="icon" href="assets/favicon/cowBoy.ico">
     <!-- ##### CSS ##### -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ##### Javascript ##### -->
+    <script defer src="assets/js/script.js"></script>
+
+    <title>Pokédex || LuckyLucs</title>
 </head>
 <body>
     
     <main>
 
-        <img src="assets/images/pokedex.png" alt="Pokédex">
+        <img src="assets/favicon/cowBoy.ico" alt="pokemon" class="pokemon__img">
 
+        <h1 class="pokemon__data">
+            <span class="pokemon__number">6</span> -
+            <span class="pokemon__name">Dracofeu</span>
+        </h1>
+
+        <form action="" class="form">
+            <input type="search" class="input__search" placeholder="Nombre / Nom" required>
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">&lt; Prev</button>
+            <button class="button btn-next">Next &gt;</button>
+        </div>
+
+
+        <img src="assets/images/pokedex.png" alt="pokédex" class="pokedex">
+        
     </main>
-
-    <!-- ##### Javascript ##### -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
