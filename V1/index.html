@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="design.css" />
+    <script src="recherche.js"></script>
+    <script src="retourPage.js"></script>
+        
+    <link rel="shortcut icon" href="presimg/ball.png"> <!-- met image dans title -->
+
+    <title>Pokédex | LuckaLucs</title>
+
+</head>
+
+<body>
+
+    <div class="principal">
+
+        <img class="logo" src="presimg/logo.png" /> 
+        <a href="troll/RitchieRage.mp4" target="_blank"><img class="banniere" src="presimg/pokedex.png" /></a>
+
+        <!-- Barre de recherche -->
+        <br /> <br />
+        <input type="text" id="findField" placeholder="Nom ou Numéro du Pokémon !" />
+        <button id="button" onclick="FindNext();">Scan !</button>        
+        <br /> <br />
+
+        <!-- Bouton de retour -->
+        <div><a id="cRetour" class="cInvisible" href="index.html"></a></div>
+
+
+        <!-- Carte Pokémon -->
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/001.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>001
+                </p>
+                <h2>Bulbizarre</h2>
+                
+                <div class="type plante">
+                    <span>Plante</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/002.html"><img src="images/002.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>002
+                </p>
+                <h2>Herbizarre</h2>
+                
+                <div class="type plante">
+                    <span>Plante</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/003.html"><img src="images/003.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>003
+                </p>
+                <h2>Florizarre</h2>
+                
+                <div class="type plante">
+                    <span>Plante</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/004.html"><img src="images/004.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>004
+                </p>
+                <h2>Salamèche</h2>
+                
+                <div class="type feu">
+                    <span>Feu</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/005.html"><img src="images/005.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>005
+                </p>
+                <h2>Reptincel</h2>
+                
+                <div class="type feu">
+                    <span>Feu</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/006.html"><img src="images/006.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>006
+                </p>
+                <h2>Dracaufeu</h2>
+                
+                <div class="type feu">
+                    <span>Feu</span>
+                </div> 
+                <div class="type vol">
+                    <span>Vol</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/007.html"><img src="images/007.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>007
+                </p>
+                <h2>Carapuce</h2>
+                
+                <div class="type eau">
+                    <span>Eau</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/008.html"><img src="images/008.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>008
+                </p>
+                <h2>Carabaffe</h2>
+                
+                <div class="type eau">
+                    <span>Eau</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/009.html"><img src="images/009.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>009
+                </p>
+                <h2>Tortank</h2>
+                
+                <div class="type eau">
+                    <span>Eau</span>
+                </div>  
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/010.html"><img src="images/010.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>010
+                </p>
+                <h2>Chenipan</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/011.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>011
+                </p>
+                <h2>Chrysacier</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/012.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>012
+                </p>
+                <h2>Papilusion</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div> 
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/013.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>013
+                </p>
+                <h2>Aspicot</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/014.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>014
+                </p>
+                <h2>Coconfort</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/015.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>015
+                </p>
+                <h2>Dardargnan</h2>
+                
+                <div class="type insecte">
+                    <span>Insecte</span>
+                </div>
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/016.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>016
+                </p>
+                <h2>Roucool</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/017.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>017
+                </p>
+                <h2>Roucoups</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/018.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>018
+                </p>
+                <h2>Roucarnage</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/019.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>019
+                </p>
+                <h2>Rattata</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/020.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>020
+                </p>
+                <h2>Rattatac</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/021.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>021
+                </p>
+                <h2>Piafabec</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/022.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>022
+                </p>
+                <h2>Rapasdepic</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type vol">
+                    <span>Vol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/023.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>023
+                </p>
+                <h2>Abo</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/024.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>024
+                </p>
+                <h2>Arbok</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/025.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>025
+                </p>
+                <h2>Pickachu</h2>
+                
+                <div class="type eleck">
+                    <span>Electrik</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/026.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>026
+                </p>
+                <h2>Raichu</h2>
+                
+                <div class="type eleck">
+                    <span>Electrik</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/027.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>027
+                </p>
+                <h2>Sablette</h2>
+                
+                <div class="type sol">
+                    <span>Sol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/028.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>028
+                </p>
+                <h2>Sablaireau</h2>
+                
+                <div class="type sol">
+                    <span>Sol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/029.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>029
+                </p>
+                <h2>Nidoran (F)</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/030.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>030
+                </p>
+                <h2>Nidorina</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/031.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>031
+                </p>
+                <h2>Nidoqueen</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+                <div class="type sol">
+                    <span>Sol</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/032.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>032
+                </p>
+                <h2>Nidoran (M)</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/033.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>033
+                </p>
+                <h2>Nidorino</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/034.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>034
+                </p>
+                <h2>Nidoking</h2>
+                
+                <div class="type poison">
+                    <span>Poison</span>
+                </div>
+                <div class="type sol">
+                    <span>Sol</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/035.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>035
+                </p>
+                <h2>Mélofée</h2>
+                
+                <div class="type fee">
+                    <span>Fée</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/036.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>036
+                </p>
+                <h2>Mélodelfe</h2>
+                
+                <div class="type fee">
+                    <span>Fée</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/037.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>037
+                </p>
+                <h2>Goupix</h2>
+                
+                <div class="type feu">
+                    <span>Feu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/038.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>038
+                </p>
+                <h2>Feunard</h2>
+                
+                <div class="type feu">
+                    <span>Feu</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/039.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>039
+                </p>
+                <h2>Rondoudou</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type fee">
+                    <span>Fée</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokecard">
+            <a href="pokemon/001.html"><img src="images/040.png" /></a>
+            <div class="pokemon-info">
+                <p class="id">
+                    <span>N°</span>040
+                </p>
+                <h2>Grodoudou</h2>
+                
+                <div class="type normal">
+                    <span>Normal</span>
+                </div>
+                <div class="type fee">
+                    <span>Fée</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+body{
+    background-image: url("presimg/fond.png"); /* Image de fond */
+    margin: 50px 15% 25px; /* margin -> top, left+right, bottom */
+}
+
+div.principal{ /* div principale */
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.logo{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.banniere{ /* Image */
+    width: 250px;
+    height: 50px;
+    background-color: white;
+}
+
+
+
+/* Carte Pokemon */
+.pokecard{ /* div des cartes */
+    display:inline-block;
+    border: solid;
+    border-color: rgb(240, 240, 240);
+    border-radius: 8px;
+    margin: 10px 5px 5px;
+}
+.pokecard:hover{ /* au survol */
+    cursor: pointer;
+    animation: yes 0.4s forwards; /* animation -> nom, temps, reviens valeur initiale */
+    border-color: rgb(45, 45, 45);
+}
+@keyframes yes { /* keyfreames -> nom animation */
+    0%{ /* 0% -> sur Y 0px */
+        transform: translateY(0px);
+    }
+    20%{ /* 20% -> sur Y -20px */
+        transform: translateY(-20px);
+    }
+    40%{ /* 40% -> sur Y 0px */
+        transform: translateY(0px);
+    }
+    60%{ /* 60% -> sur Y -30px */
+        transform: translateY(-30px);
+    }
+    80%{ /* 80% -> sur Y 0px */
+        transform: translateY(0px);
+    }
+    100%{ /* 100% -> sur Y 0px */
+        transform: translateY(-10px);
+    }
+}
+
+img{
+    background-color: rgb(240, 240, 240);
+    border-radius: 5.5px 5.5px 0px 0px; /* Permet d'arrondir les bords supérieurs */
+}
+
+.pokemon-info{ /* Dessous de l'image (description) */
+    margin: -15px 8px 10px;
+}
+
+.id{ /* Numéro Pokémons */
+    color: grey;
+    font-size: small;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{ /* Nom des Pokémons */
+    font-weight: lighter;
+    font-family: Arial, Round;
+    margin: -8px 0 20px; /* Margin dessus et dessous */
+}
+
+.type { /* Type + couleur */
+    display: inline-block;
+    border-radius: 8px;
+    width: 80px;
+    color: white;
+}
+
+
+
+/* Boutton de la barre de recherche */
+#findField{
+    border-radius: 10px;
+    border: solid 2px rgb(45, 45, 45);
+    text-align: center;
+    width: 25%;
+    background-color: rgb(240, 240, 240);
+}
+#button{
+    border-radius: 10px;
+    border: solid 2px rgb(45, 45, 45);
+    text-align: center;
+    width: 8%;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+#button:hover{
+    background-color: rgb(253, 50, 50);
+    color: white;
+    padding: 5px;
+}
+
+
+
+/* Bouton de retour en haut de Page */
+a#cRetour{
+    border-radius:15px;
+    padding:15px;
+    font-size:15px;
+    text-align:center;
+    color:white;
+    background:rgba(0, 0, 0, 0.25);
+    position:fixed;
+    right:3%;
+    opacity:1;
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+}
+a#cRetour:before{ content: "\25b2"; }
+a#cRetour:hover{
+    background:rgba(0, 0, 0, 1);
+    transition:all ease-in 0.2s;
+}
+a#cRetour.cInvisible{
+    bottom:-35px;
+    opacity:0;
+    transition:all ease-in 0.5s;
+}  
+a#cRetour.cVisible{
+    bottom:20px;
+    opacity:1;
+}
+
+
+
+
+/* Page Pokemon */
+.principal2{ /* Div principal */
+    background-color: rgb(229, 229, 229);
+    border-radius: 15px;
+    padding: 0.2px 0 20px;
+}
+
+.retour{ /* Retour pokedex */
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+.retour:hover{
+    color: red;
+}
+
+.nom{ /* centrer le nom */
+    text-align: center;
+    font-weight: lighter;
+    font-family: Arial, Round;
+}
+
+.num{ /* typo numero */
+    color: grey;
+    font-size: 60%;
+    font-weight: bold;
+}
+
+.imgDroite{ /* Decaler l'image a droite */
+    margin-left: 6%;
+    display: inline;
+    border-radius: 5.5px;
+}
+.imgDroite:hover{
+    animation: no 0.4s forwards; /* animation -> nom, temps, reviens valeur initiale */
+}
+@keyframes no { /* keyfreames -> nom animation */
+    0%{ /* 0% -> sur Y 0px */
+        transform: translateY(0px);
+    }
+    20%{ /* 20% -> sur Y -20px */
+        transform: translateX(-30px);
+    }
+    40%{ /* 40% -> sur Y 0px */
+        transform: translateX(0px);
+    }
+    60%{ /* 60% -> sur Y -30px */
+        transform: translateX(30px);
+    }
+    80%{ /* 80% -> sur Y 0px */
+        transform: translateX(-30px);
+    }
+    100%{ /* 100% -> sur Y 0px */
+        transform: translateX(0px);
+    }
+}
+
+.description{ /* description du pokemon */
+    display: inline-block;
+    position: relative;
+    padding: 0 8px 0;
+    bottom: 55px; /* Centrer la div */
+    width: 60%;
+    border-radius: 10px;
+    border: solid 2px;
+    background-color: rgb(240, 240, 240);
+    margin: 0 3% 0;
+    font-family: Arial, Round;
+}
+
+.poketype{
+    margin-left: 9%;
+}
+.mili{ /* Centre */
+    text-align: center;
+}
+
+.evolution{
+    border: solid 2px rgb(0, 60, 255);
+    border-radius: 10px;
+    margin: 0 15% 0;
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+    font-family: Arial, Round;
+}
+.imgevo{
+    width: 20%;
+    background-color: rgb(202, 202, 202);
+    margin: 0 15px 0;
+}
+
+
+
+
+/* Couleur des Types */
+.plante{
+    background-color: rgb(0, 180, 0);
+}
+.poison{
+    background-color: rgb(145, 30, 255);
+}
+.feu{
+    background-color: rgb(240, 155, 0);
+}
+.vol{
+    background-color: rgb(115, 185, 255);}
+.eau{
+    background-color: rgb(35, 85, 255);
+}
+.insecte{
+    background-color: rgb(0, 110, 0);
+}
+.normal{
+    background-color: rgb(150, 150, 150);
+}
+.eleck{
+    background-color: rgb(245, 200, 15);
+}
+.sol{
+    background-color: rgb(185, 165, 60);
+}
+.fee{
+    background-color: rgb(230, 120, 235);
+}
+.psy{
+    background-color: rgb(190, 0, 200);
+}
+.glace{
+    background-color: rgb(0, 183, 255);
+}
