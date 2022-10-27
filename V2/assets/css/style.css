@@ -26,11 +26,11 @@ main{
     max-width: 425px;
 }
 
-.pokemon__img{
+.pokemon__image{
     position: absolute;
     bottom: 55%;
     left: 50%;
-    transform: translate(-63%, 20%);
+    transform: translate(-60%, 20%);
     height: 18%;
 }
 
