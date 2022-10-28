@@ -2,6 +2,8 @@ const pokemonName = document.querySelector('.pokemon__name');
 const pokemonNumber = document.querySelector('.pokemon__number');
 const pokemonImage = document.querySelector('.pokemon__image');
 
+const modalName = document.querySelector('.services__modal-title');
+
 const form = document.querySelector('.form');
 const input = document.querySelector('.input__search');
 
@@ -33,6 +35,7 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.display = 'block';
         pokemonNumber.innerHTML = data[0].id;
         pokemonName.innerHTML = data[1]['names']['4']['name'];
+        modalName.innerHTML = data[1]['names']['4']['name'];
         if(pokemon < 650){
             pokemonImage.src = data[0]['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         }else{
@@ -68,3 +71,31 @@ buttonNext.addEventListener('click', () => {
 });
 
 renderPokemon(searchPokemon);
+
+
+
+
+
+
+/* ===== Modal ===== */
+const modalViews = document.querySelectorAll('.services__modal'),
+        modalBtns = document.querySelectorAll('.info-modal'),
+        modalCloses = document.querySelectorAll('.services__modal-close')
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () =>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener('click', () =>{
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
