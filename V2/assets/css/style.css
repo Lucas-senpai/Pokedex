@@ -11,7 +11,7 @@
 body{
     text-align: center;
     min-height: 100vh;
-    background-color: hsl(250, 28%, 12%);
+ 
 }
 
 main{
@@ -122,6 +122,25 @@ main{
 
 
 
+.pokename__modal{
+    color: #3a444d;
+}
+
+.pokeimg__modal{
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.stats{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+.stats__titre{
+    margin-bottom: 0.5rem;
+}
+
+
+
 .services__modal{
     position: fixed;
     top: 0;
@@ -142,13 +161,9 @@ main{
 .services__modal-content{
     position: relative;
     background-color: #fff;
-    padding: 4%;
+    padding: 2% 5%;
     border-radius: 20px;
-    box-shadow: -4px 5px 0 #888, -6px 7px 0 #333;
-}
-
-.services__modal-services{
-    row-gap: 1rem;
+    box-shadow: -4px 5px 0 #888, -6px 8px 0 #222;
 }
 
 .services__modal-service{
@@ -157,9 +172,9 @@ main{
 }
 
 .services__modal-title{
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    color: #aaa;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
 
 .services__modal-close{
