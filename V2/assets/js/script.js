@@ -31,7 +31,7 @@ const modalName = document.querySelector('.pokename__modal');
 const modalNumb = document.querySelector('.pokenumb__modal');
 const modalImg = document.querySelector('.pokeimg__modal');
 const modalDesc = document.querySelector('.pokemon__desc');
-const modalType1 = document.querySelector('.modalType');
+const modalType1 = document.querySelector('.modalType1');
 const modalType2 = document.querySelector('.modalType2');
 
 // recupe des stats
@@ -103,7 +103,6 @@ const renderPokemon = async (pokemon) => {
         
         // recupe des url type puis comparaison dans la fonction //
         var PokeType1 = Type[0]['type']['url'];
-        
         // si il y a 2 type alors on renseigne le type 2 //
         if(nbType == 2){
             var PokeType2 = Type[1]['type']['url'];
@@ -125,123 +124,159 @@ const renderPokemon = async (pokemon) => {
 // fonction pour "traduire" les Types (a opptimisé mais jsp faire) //
 function PokemonType(PokeType1, PokeType2, nbType){
 
+    modalType2.style.display = "none";
+
     switch (PokeType1) {
         case 'https://pokeapi.co/api/v2/type/1/':
             PokeType1 = 'Normal'
+            modalType1.style.backgroundColor = "#ADA594";
             break;
         case 'https://pokeapi.co/api/v2/type/2/':
             PokeType1 = 'Combat'
+            modalType1.style.backgroundColor = "#A55239";
             break;
         case 'https://pokeapi.co/api/v2/type/3/':
             PokeType1 = 'Vol'
+            modalType1.style.backgroundColor = "#9CADF7";
             break;
         case 'https://pokeapi.co/api/v2/type/4/':
             PokeType1 = 'Poison'
-            modalType1.classList.add("poison");
+            modalType1.style.backgroundColor = "#B55AA5";
             break; 
         case 'https://pokeapi.co/api/v2/type/5/':
             PokeType1 = 'Sol'
+            modalType1.style.backgroundColor = "#D6B55A";
             break;
         case 'https://pokeapi.co/api/v2/type/6/':
             PokeType1 = 'Roche'
+            modalType1.style.backgroundColor = "#BDA55A";
             break;
         case 'https://pokeapi.co/api/v2/type/7/':
             PokeType1 = 'Insecte'
+            modalType1.style.backgroundColor = "#ADBD21";
             break;
         case 'https://pokeapi.co/api/v2/type/8/':
             PokeType1 = 'Spectre'
+            modalType1.style.backgroundColor = "#6363B5";
             break;
         case 'https://pokeapi.co/api/v2/type/9/':
             PokeType1 = 'Acier'
+            modalType1.style.backgroundColor = "#ADADC6";
             break;
         case 'https://pokeapi.co/api/v2/type/10/':
             PokeType1 = 'Feu'
-            modalType1.classList.remove("plante", "poison");
-            modalType1.classList.add("feu");
+            modalType1.style.backgroundColor = "#F75231";
             break;
         case 'https://pokeapi.co/api/v2/type/11/':
             PokeType1 = 'Eau'
+            modalType1.style.backgroundColor = "#399CFF";
             break;
         case 'https://pokeapi.co/api/v2/type/12/':
             PokeType1 = 'Plante'
-            modalType1.classList.add("plante");
+            modalType1.style.backgroundColor = "#7BCE52";
             break; 
         case 'https://pokeapi.co/api/v2/type/13/':
             PokeType1 = 'Électrik'
+            modalType1.style.backgroundColor = "#FFC631";
             break;
         case 'https://pokeapi.co/api/v2/type/14/':
             PokeType1 = 'Psy'
+            modalType1.style.backgroundColor = "#FF73A5";
             break;
         case 'https://pokeapi.co/api/v2/type/15/':
             PokeType1 = 'Glace'
+            modalType1.style.backgroundColor = "#5ACEE7";
             break;
         case 'https://pokeapi.co/api/v2/type/16/':
             PokeType1 = 'Dragon'
+            modalType1.style.backgroundColor = "#8858F6";
             break;
         case 'https://pokeapi.co/api/v2/type/17/':
             PokeType1 = 'Ténèbre'
+            modalType1.style.backgroundColor = "#735A4A";
             break;
         case 'https://pokeapi.co/api/v2/type/18/':
             PokeType1 = 'Fée'
+            modalType1.style.backgroundColor = "#E09AE3";
             break;
     }
 
     if(nbType == 2){
+
+        modalType2.style.display = "inline";
+
         switch (PokeType2) {
             case 'https://pokeapi.co/api/v2/type/1/':
                 PokeType2 = 'Normal'
+                modalType2.style.backgroundColor = "#ADA594";
                 break;
             case 'https://pokeapi.co/api/v2/type/2/':
                 PokeType2 = 'Combat'
+                modalType2.style.backgroundColor = "#A55239";
                 break;
             case 'https://pokeapi.co/api/v2/type/3/':
                 PokeType2 = 'Vol'
+                modalType2.style.backgroundColor = "#9CADF7";
                 break;
             case 'https://pokeapi.co/api/v2/type/4/':
                 PokeType2 = 'Poison'
-                modalType2.classList.add("poison");
+                modalType2.style.backgroundColor = "#B55AA5";
                 break; 
             case 'https://pokeapi.co/api/v2/type/5/':
                 PokeType2 = 'Sol'
+                modalType2.style.backgroundColor = "#D6B55A";
                 break;
             case 'https://pokeapi.co/api/v2/type/6/':
                 PokeType2 = 'Roche'
+                modalType2.style.backgroundColor = "#BDA55A";
                 break;
             case 'https://pokeapi.co/api/v2/type/7/':
                 PokeType2 = 'Insecte'
+                modalType2.style.backgroundColor = "#ADBD21";
                 break;
             case 'https://pokeapi.co/api/v2/type/8/':
                 PokeType2 = 'Spectre'
+                modalType2.style.backgroundColor = "#6363B5";
                 break;
             case 'https://pokeapi.co/api/v2/type/9/':
                 PokeType2 = 'Acier'
+                modalType2.style.backgroundColor = "#ADADC6";
                 break;
             case 'https://pokeapi.co/api/v2/type/10/':
                 PokeType2 = 'Feu'
+                modalType2.style.backgroundColor = "#F75231";
                 break;
             case 'https://pokeapi.co/api/v2/type/11/':
                 PokeType2 = 'Eau'
+                modalType2.style.backgroundColor = "#399CFF";
                 break;
             case 'https://pokeapi.co/api/v2/type/12/':
                 PokeType2 = 'Plante'
+                modalType2.style.backgroundColor = "#7BCE52";
                 break; 
             case 'https://pokeapi.co/api/v2/type/13/':
                 PokeType2 = 'Électrik'
+                modalType2.style.backgroundColor = "#FFC631";
                 break;
             case 'https://pokeapi.co/api/v2/type/14/':
                 PokeType2 = 'Psy'
+                modalType2.style.backgroundColor = "#FF73A5";
                 break;
             case 'https://pokeapi.co/api/v2/type/15/':
                 PokeType2 = 'Glace'
+                modalType2.style.backgroundColor = "#5ACEE7";
                 break;
             case 'https://pokeapi.co/api/v2/type/16/':
                 PokeType2 = 'Dragon'
+                modalType2.style.backgroundColor = "#8858F6";
                 break;
             case 'https://pokeapi.co/api/v2/type/17/':
                 PokeType2 = 'Ténèbre'
+                modalType2.style.backgroundColor = "#735A4A";
                 break;
             case 'https://pokeapi.co/api/v2/type/18/':
                 PokeType2 = 'Fée'
+                modalType2.style.backgroundColor = "#E09AE3";
                 break;
         }
     }

@@ -18,39 +18,44 @@
     
     <main>
 
+        <!-- L'image du pokemon -->
         <img src="#" alt="pokemon" class="pokemon__image">
 
+        <!-- Son nom et numero -->
         <h1 class="pokemon__data">
             <span class="pokemon__number"></span> -
             <span class="pokemon__name"></span>
         </h1>
 
+        <!-- Le boutton Info -->
         <div class="infos">
             <button class="info info-modal">Infos</button>
         </div>
 
+        <!-- Infos sur le pokemon -->
         <div class="services__modal">
             <div class="services__modal-content">
+                <!-- Son numero et nom -->
                 <h2 class="services__modal-title">
                     <span class="pokenumb__modal"></span> -
                     <span class="pokename__modal"></span>
                 </h2>
+                <!-- Pour fermer les infos -->
                 <p class='services__modal-close'>x</p>
 
-                <ul class="services__modal-services grid">
+                <ul class="services__modal-services">
                     <img src="#" alt="pokemon" class="pokeimg__modal">
-
+                    <!-- Sa caracteristique / type -->
                     <li class="stats">
                         <span class="pokemon__desc"></span>
                     </li>
 
+                    <!-- Son / ses types -->
                     <li class="stats">
-                        <span>Type :<br>
-                        <div class="type">
-                            <span class="modalType"></span>&nbsp;<span class="modalType2"></span></span>
-                        </div>
+                        <span class="modalType1"></span><span class="modalType2"></span></span>
                     </li>
 
+                    <!-- Ses capacités -->
                     <ul class="stats">
                         <li class="stats__titre">Statistiques de base :</li>
                         <li>PV :&nbsp;<span class="hp"></span></li>
@@ -64,16 +69,18 @@
             </div>
         </div>
 
+        <!-- Barre de recherches -->
         <form class="form">
             <input type="search" class="input__search" placeholder="Nombre / Nom" required>
         </form>
 
+        <!-- Bouttons navigations -->
         <div class="buttons">
             <button class="button btn-prev">&lt; Prev</button>
             <button class="button btn-next">Next &gt;</button>
         </div>
 
-
+        <!-- Image du pokedex -->
         <img src="assets/images/pokedex.png" alt="pokédex" class="pokedex">
         
     </main>
